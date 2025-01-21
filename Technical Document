@@ -8,4 +8,3 @@ aws --version
 minikube start --driver=docker #creating the cluster
 kubectl cluster-info #checking the information of the cluster just created
 docker build -t my-app:v1.0 . #building the app
-docker run -p 3000:3000 my-app:v1.0 #making sure to run it
