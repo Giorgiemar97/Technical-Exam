@@ -1,6 +1,6 @@
 To do list
 -Check that the applications are working as they should (DONE!)
--Create a Kubernetes cluster (DONE!)
+-Create a Kubernetes cluster (DONE!) - (Used Minikube start -- in order to create the cluster)
 
 -Containerize the application using Docker (In progress) 
 a. Making sure to build the app - Kept getting an error on load build context cancelled.
@@ -18,8 +18,10 @@ c. Go into the app and explore
 
 Extra (just in case one has time):
 - Expose the application via https (and not http)
+a.
+
 - Make a trivial change to the application and do a rolling update
--
+- Helm-ify the deployment
 
 
 
