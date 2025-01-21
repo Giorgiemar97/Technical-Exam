@@ -1,56 +1,11 @@
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ #Checking apps
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ docker --version #checking docker
-Docker version 27.4.0, build bde2b89
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ export PATH=$PATH:$(pwd) #Adding a path to find Helm
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ helm version #checking helm, making sure helm works
-version.BuildInfo{Version:"v3.16.4", GitCommit:"7877b45b63f95635153b29a42c0c2f4273ec45ca", GitTreeState:"clean", GoVersion:"go1.22.7"}
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ kubectl version --client
-Client Version: v1.30.5
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$  Minikube version #checking Minikube
-minikube version: v1.35.0
-commit: dd5d320e41b5451cdf3c01891bc4e13d189586ed-dirty
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ aws s3 ls #checking AWS
-
-An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation: The AWS Access Key Id you provided does not exist in our records.
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ aws --version
-aws-cli/2.22.35 Python/3.12.6 Windows/11 exe/AMD64
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ minikube start --driver=docker #creating the cluster
-* minikube v1.35.0 on Microsoft Windows 11 Pro 10.0.22631.4751 Build 22631.4751
-* Using the docker driver based on existing profile
-* Starting "minikube" primary control-plane node in "minikube" cluster
-* Pulling base image v0.0.46 ...
-* Restarting existing docker container for "minikube" ...
-! Failing to connect to https://registry.k8s.io/ from both inside the minikube container and host machine
-* To pull new external images, you may need to configure a proxy: https://minikube.sigs.k8s.io/docs/reference/networking/proxy/
-* Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
-* Verifying Kubernetes components...
-  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
-* Enabled addons: default-storageclass, storage-provisioner
-* kubectl not found. If you need it, try: 'minikube kubectl -- get pods -A'
-* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
-
-giorg@DESKTOP-KFOFU3M MINGW64 ~ (master)
-$ kubectl cluster-info #checking the information of the cluster just created
-Kubernetes control plane is running at https://127.0.0.1:51703
-CoreDNS is running at https://127.0.0.1:51703/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-
+#Checking apps
+docker --version #checking docker
+export PATH=$PATH:$(pwd) #Adding a path to find Helm
+helm version #checking helm, making sure helm works
+kubectl version --client
+Minikube version #checking Minikube
+aws --version
+minikube start --driver=docker #creating the cluster
+kubectl cluster-info #checking the information of the cluster just created
+docker build -t my-app:v1.0 . #building the app
+docker run -p 3000:3000 my-app:v1.0 #making sure to run it
