@@ -7,4 +7,9 @@ Minikube version #checking Minikube
 aws --version
 minikube start --driver=docker #creating the cluster
 kubectl cluster-info #checking the information of the cluster just created
-docker build -t my-app:v1.0 . #building the app
+docker build -t my-app:v1.0 . #building the app.
+#Had a problem with building the app. Ran as administrator, cleared cache in Docker. 
+docker system restart #Tried to restart docker, the problem persisted.
+docker login
+#Tried to login to see if that would fix the issue
+#Same issue persisted. Writing down more notes on how I would finish the process in the To-do list file.
