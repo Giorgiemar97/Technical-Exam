@@ -18,8 +18,10 @@ c. Go into the app and explore
 
 Extra (just in case one has time):
 - Expose the application via https (and not http)
-a.
-
+a. Use kubernetes to create a deployment
+b. Create a service to expose your app (which has already been done to run it)
+c. Use NodePort <NodeIP>
+d. Using labels 
 - Make a trivial change to the application and do a rolling update
 - Helm-ify the deployment
 
