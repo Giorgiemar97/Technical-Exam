@@ -4,8 +4,8 @@ To do list
 
 -Containerize the application using Docker (In progress) 
 a. Making sure to build the app - Kept getting an error on load build context cancelled.
-b. Making sure to put it into the container
-c. Testing the app.
+b. Making sure to put it into the container 
+c. Testing the app. (docker run -p 3000:3000 my-app:v1.0)
 -Push the container image to a Container Registry 
 a. Need to log into Docker hub
 b. Make sure to tag the image one wants
