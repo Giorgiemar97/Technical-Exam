@@ -13,3 +13,5 @@ docker system restart #Tried to restart docker, the problem persisted.
 docker login
 #Tried to login to see if that would fix the issue
 #Same issue persisted. Writing down more notes on how I would finish the process in the To-do list file.
+docker build -t my-app:v1.0 . #building the app. Tried again, but instead changed the docker builder to the default instead of Linux which it had defaulted to.
+#Still gave back the same error. 
