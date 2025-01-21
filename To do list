@@ -1,8 +1,9 @@
 To do list
 -Check that the applications are working as they should (DONE!)
 -Create a Kubernetes cluster (DONE!)
--Containerize the application using Docker (In progress) - Kept getting an error on load build context cancelled.
-a. Making sure to build the app
+
+-Containerize the application using Docker (In progress) 
+a. Making sure to build the app - Kept getting an error on load build context cancelled.
 b. Making sure to put it into the container
 c. Testing the app.
 -Push the container image to a Container Registry 
@@ -11,5 +12,14 @@ b. Make sure to tag the image one wants
 c. Push the image into the hub using my credentials (docker push Giorgiemar97/node-hostname:v1.0 )
 d. You can see the image either on your Docker home or you can pull it up using (docker run Giorgiemar97/node-hostname:v1.0 )
 -Run the application inside your Kubernetes cluster 
+a. Create a deployment file
+b. Create a service to expose the app 
+c. Go into the app and explore
+
+Extra (just in case one has time):
+- Expose the application via https (and not http)
+- Make a trivial change to the application and do a rolling update
+-
+
 
 
